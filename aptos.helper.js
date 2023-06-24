@@ -1,6 +1,5 @@
+import { GAS_LIMIT_SAFETY_BPS } from "./config.js";
 import { aptosClient } from "./contract.js";
-
-const GAS_LIMIT_SAFETY_BPS = 2000; // aptos
 
 export const claimCoinPayload = () => {
   return {

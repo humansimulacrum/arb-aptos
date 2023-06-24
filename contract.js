@@ -2,10 +2,9 @@ import * as aptos from "aptos";
 import Web3 from "web3";
 import * as fs from "fs";
 import * as path from "path";
+import { preferedNetwork } from "./config.js";
 
 const __dirname = path.resolve();
-
-const preferedNetwork = "Arbitrum";
 
 // rpc
 const web3ProviderSelect = {

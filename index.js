@@ -13,28 +13,20 @@ import {
   getAptosBalance,
   sendAndConfirmTransaction,
 } from "./aptos.helper.js";
+import {
+  preferedNetwork,
+  sleepFrom,
+  sleepTo,
+  ethMaxGwei,
+  sleepOnHighGas,
+  ethToBridgeMin,
+  ethToBridgeMax,
+  zeroAddress,
+  aptosGas,
+  aptosAirdropAmount,
+  maxPriorityFeePerGas,
+} from "./config.js";
 
-// config
-const preferedNetwork = "Arbitrum";
-
-const ethMaxGwei = 20;
-const sleepOnHighGas = 60000;
-
-const ethToBridgeMin = 0.0005;
-const ethToBridgeMax = 0.001;
-
-const zeroAddress = "0x0000000000000000000000000000000000000000";
-
-// default gas setup
-const aptosGas = 10000; // aptos gas default is 10000
-const aptosAirdropAmount = 520400; // aptos amount, sent to the wallets
-const maxPriorityFeePerGas = 1500000000; // 1.5 gwei
-
-// sleep in seconds
-const sleepFrom = 30;
-const sleepTo = 60;
-
-// main code
 const ethWallets = await accs.importETHWallets();
 const aptosWallets = await accs.importAptosWallets();
 
